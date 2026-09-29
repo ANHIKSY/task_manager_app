@@ -1,4 +1,4 @@
-from sqlmodel import SQLModel, create_engine, Session
+from sqlmodel import SQLModel, create_engine, Session  # type: ignore[reportMissingImports]
 
 sqlite_url = "sqlite:///./taskmanager.db"
 engine = create_engine(sqlite_url, echo=True)

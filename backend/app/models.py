@@ -1,4 +1,9 @@
-from sqlmodel import SQLModel, Field
+try:
+    from sqlmodel import SQLModel, Field
+except ImportError as exc:
+    raise ImportError(
+        "The 'sqlmodel' package is required. Install it with: pip install sqlmodel"
+    ) from exc
 from typing import Optional
 
 class User(SQLModel, table=True):
